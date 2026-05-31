@@ -100,15 +100,8 @@ export default function Products() {
             checklist={[
               'Upload bank statements only — AI converts them into Trial Balance, Ledger & Financial Statements',
               'Already have records — upload directly and skip AI processing',
-              'CAC certificate and MEMART captured — legal details correctly on your audited statement',
-              'Prior-year accounts? — Upload for comparative figures (IFRS requirement)',
-              'Internal team reviews all AI-generated financials before auditor assignment',
-              'Jobs assigned to rated external auditors — best performer, fastest turnaround assigned first',
-              'Final admin vetting before audited account is released to you',
-              'Delivered as a signed, stamped PDF — accepted by banks, regulators, and investors',
             ]}
             metaWebsite={{ label: 'AuditMe — available via ploutospage.com' }}
-            addonsLine="Add-ons: Company Income Tax (CIT) filing · VAT filing · Future bookkeeping via Pepcode"
             whoIsThisFor="Any business that needs audited financial statements — for loan applications, investor decks, regulatory compliance, CAC filings, or annual reporting."
             ctas={[
               {

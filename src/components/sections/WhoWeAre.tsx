@@ -5,10 +5,7 @@ import Reveal from "@/components/motion/Reveal";
 
 export default function WhoWeAre() {
   return (
-    <section
-      id="about"
-      className="scroll-mt-16 bg-[#fafeff] lg:scroll-mt-[84px]"
-    >
+    <section className="bg-[#fafeff]">
       <div className="mx-auto flex max-w-[1440px] flex-col px-5 pt-[56px] pb-[56px] xl:flex-row xl:justify-between xl:px-[100px] xl:pt-[100px] xl:pb-[100px]">
         <Reveal stagger={0.12}>
           <p

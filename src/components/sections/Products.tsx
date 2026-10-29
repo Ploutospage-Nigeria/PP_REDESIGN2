@@ -37,7 +37,10 @@ const products = [
 
 export default function Products() {
   return (
-    <section className="bg-[#f5f7fa]">
+    <section
+      id="products"
+      className="scroll-mt-16 bg-[#f5f7fa] lg:scroll-mt-[84px]"
+    >
       <div className="mx-auto max-w-[1440px] px-5 pt-[57.5px] pb-[55px] lg:px-[100px] lg:pt-[100px] lg:pb-[100px]">
         <Reveal stagger={0.12} className="text-center">
           <p

@@ -22,7 +22,8 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`${hankenGrotesk.variable} h-full font-sans antialiased`}
+      data-scroll-behavior="smooth"
+      className={`${hankenGrotesk.variable} h-full font-sans antialiased motion-safe:scroll-smooth`}
     >
       <body className="min-h-full flex flex-col">
         {/* Without JavaScript, show scroll-reveal content straight away. */}

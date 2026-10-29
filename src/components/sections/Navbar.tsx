@@ -65,7 +65,7 @@ export default function Navbar() {
 
         <div className="flex items-center gap-3">
           <Link
-            href="/products"
+            href="/#products"
             className="flex h-9 items-center rounded-full bg-brand px-[17px] text-[12.5px] font-bold text-white lg:h-12 lg:px-[22.5px] lg:text-[15.5px]"
           >
             Explore our products

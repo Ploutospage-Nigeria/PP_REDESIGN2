@@ -23,3 +23,22 @@ body {
   color: var(--foreground);
   font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
 }
+
+/* Keep scroll-reveal content hidden until GSAP takes over, so it doesn't flash. */
+@media (prefers-reduced-motion: no-preference) {
+  [data-reveal]:not([data-reveal="ready"]):not([data-reveal-stagger]),
+  [data-reveal-stagger]:not([data-reveal="ready"]) [data-reveal-item] {
+    opacity: 0;
+  }
+}
+
+/* Card hover: a slight grow and deeper shadow (GSAP power2.out curve). */
+@utility hover-lift {
+  transition-property: transform, box-shadow;
+  transition-duration: 350ms;
+  transition-timing-function: cubic-bezier(0.33, 1, 0.68, 1);
+  &:hover {
+    transform: scale(var(--lift-scale, 1.03));
+    box-shadow: 0 12px 40px -8px rgb(8 24 38 / 0.25);
+  }
+}

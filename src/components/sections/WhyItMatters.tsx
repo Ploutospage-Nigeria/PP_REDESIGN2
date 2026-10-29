@@ -1,5 +1,8 @@
 import Image from "next/image";
 
+import Float from "@/components/motion/Float";
+import Reveal from "@/components/motion/Reveal";
+
 const benefits = [
   {
     title: "Know what your business earns.",
@@ -32,26 +35,48 @@ export default function WhyItMatters() {
     <section className="bg-[#e6f8fc]">
       <div className="mx-auto flex max-w-[1440px] flex-col px-5 pt-[56px] pb-[54.5px] xl:flex-row xl:justify-between xl:px-[100px] xl:pt-[100px] xl:pb-[100px]">
         <div className="xl:w-[520px] xl:shrink-0">
-          <p className="text-sm font-bold text-brand xl:text-lg">
-            Why it matters
-          </p>
-          <h2 className="mt-[9.5px] text-[26px] leading-[34px] font-bold text-heading-mobile xl:mt-[11.5px] xl:text-4xl xl:leading-[44.4px] xl:tracking-[-0.02em] xl:text-heading">
-            Better records. Better decisions. A stronger business.
-          </h2>
-          <Image
-            src="/images/why-it-matters/illustration.png"
-            alt="Better records (sales, stock and expenses captured consistently) lead to better decisions and a stronger business with a 12-month financial history"
-            width={862}
-            height={766}
-            sizes="(min-width: 1280px) 431px, calc(100vw - 40px)"
-            className="mt-[19.5px] h-auto w-full xl:mt-[20.5px] xl:w-[431px]"
-          />
+          <Reveal stagger={0.12}>
+            <p
+              data-reveal-item
+              className="text-sm font-bold text-brand xl:text-lg"
+            >
+              Why it matters
+            </p>
+            <h2
+              data-reveal-item
+              className="mt-[9.5px] text-[26px] leading-[34px] font-bold text-heading-mobile xl:mt-[11.5px] xl:text-4xl xl:leading-[44.4px] xl:tracking-[-0.02em] xl:text-heading"
+            >
+              Better records. Better decisions. A stronger business.
+            </h2>
+          </Reveal>
+          <Reveal
+            variant="left"
+            duration={1}
+            className="mt-[19.5px] xl:mt-[20.5px] xl:w-[431px]"
+          >
+            <Float>
+              <Image
+                src="/images/why-it-matters/illustration.png"
+                alt="Better records (sales, stock and expenses captured consistently) lead to better decisions and a stronger business with a 12-month financial history"
+                width={862}
+                height={766}
+                sizes="(min-width: 1280px) 431px, calc(100vw - 40px)"
+                className="h-auto w-full"
+              />
+            </Float>
+          </Reveal>
         </div>
 
-        <ul className="mt-[30px] xl:mt-0 xl:max-w-[568px] xl:flex-1">
+        <Reveal
+          as="ul"
+          variant="right"
+          stagger={0.12}
+          className="mt-[30px] xl:mt-0 xl:max-w-[568px] xl:flex-1"
+        >
           {benefits.map((benefit, i) => (
             <li
               key={benefit.title}
+              data-reveal-item
               className={`relative pl-[34px] xl:pl-[35.3px] ${i === 0 ? "" : i === 1 ? "mt-[23px] xl:mt-[26.5px]" : "mt-[23px] xl:mt-[31px]"}`}
             >
               <Image
@@ -71,7 +96,7 @@ export default function WhyItMatters() {
               </p>
             </li>
           ))}
-        </ul>
+        </Reveal>
       </div>
     </section>
   );

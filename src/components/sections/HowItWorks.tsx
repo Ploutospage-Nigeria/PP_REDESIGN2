@@ -1,5 +1,7 @@
 import type { CSSProperties, ReactNode } from "react";
 
+import Reveal from "@/components/motion/Reveal";
+
 // Step cards are drawn at their 228.4×180 desktop size and scale with the
 // card's width (the mobile cards are the same drawing, 1.31× larger).
 const u = (n: number) => `calc(var(--u) * ${n})`;
@@ -41,23 +43,39 @@ export default function HowItWorks() {
   return (
     <section className="bg-white">
       <div className="mx-auto max-w-[1440px] px-5 pt-[55px] pb-[54.5px] lg:px-[100px] lg:pt-[99px] lg:pb-[100px]">
-        <div className="text-center">
-          <p className="text-sm font-bold text-brand lg:text-lg">
+        <Reveal stagger={0.12} className="text-center">
+          <p
+            data-reveal-item
+            className="text-sm font-bold text-brand lg:text-lg"
+          >
             How it works
           </p>
-          <h2 className="mt-[7.5px] text-[26px] leading-[34px] font-bold text-heading-mobile lg:mt-[13px] lg:text-4xl lg:leading-[43.2px] lg:tracking-[-0.02em] lg:text-heading">
+          <h2
+            data-reveal-item
+            className="mt-[7.5px] text-[26px] leading-[34px] font-bold text-heading-mobile lg:mt-[13px] lg:text-4xl lg:leading-[43.2px] lg:tracking-[-0.02em] lg:text-heading"
+          >
             From invisible to bankable in few days
           </h2>
-        </div>
+        </Reveal>
 
-        <ol className="mt-[31px] grid gap-[33px] pl-[50.7px] lg:mt-[77px] lg:grid-cols-5 lg:gap-6 lg:pl-0">
+        <Reveal
+          as="ol"
+          stagger={0.15}
+          className="mt-[31px] grid gap-[33px] pl-[50.7px] lg:mt-[77px] lg:grid-cols-5 lg:gap-6 lg:pl-0"
+        >
           {steps.map((step, i) => (
-            <li key={step.title} className="relative">
+            <li key={step.title} data-reveal-item className="relative">
               {i < steps.length - 1 && (
-                <span
+                <Reveal
+                  as="span"
                   aria-hidden="true"
+                  variant="grow-down"
+                  delay={0.4}
+                  duration={0.9}
                   className="absolute top-4 -bottom-[49px] -left-[34.7px] w-[1.5px] -translate-x-1/2 bg-[#d6e2ec] lg:hidden"
-                />
+                >
+                  {null}
+                </Reveal>
               )}
               <div className="absolute top-0 -left-[50.7px] lg:static lg:flex lg:items-center">
                 <span
@@ -66,10 +84,16 @@ export default function HowItWorks() {
                   {i + 1}
                 </span>
                 {i < steps.length - 1 && (
-                  <span
+                  <Reveal
+                    as="span"
                     aria-hidden="true"
+                    variant="grow-x"
+                    delay={0.3 + i * 0.15}
+                    duration={0.9}
                     className="hidden h-0.5 flex-1 bg-[#d6e2ec] lg:ml-1 lg:-mr-6 lg:block"
-                  />
+                  >
+                    {null}
+                  </Reveal>
                 )}
               </div>
               <div className="lg:mt-6">{step.visual}</div>
@@ -81,7 +105,7 @@ export default function HowItWorks() {
               </p>
             </li>
           ))}
-        </ol>
+        </Reveal>
       </div>
     </section>
   );

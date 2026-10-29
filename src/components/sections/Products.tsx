@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import ArrowRight from "@/components/icons/ArrowRight";
+import Reveal from "@/components/motion/Reveal";
 
 const products = [
   {
@@ -36,26 +37,42 @@ const products = [
 
 export default function Products() {
   return (
-    <section className="bg-[#f5f7fa]">
+    <section
+      id="products"
+      className="scroll-mt-16 bg-[#f5f7fa] lg:scroll-mt-[84px]"
+    >
       <div className="mx-auto max-w-[1440px] px-5 pt-[57.5px] pb-[55px] lg:px-[100px] lg:pt-[100px] lg:pb-[100px]">
-        <div className="text-center">
-          <p className="text-sm font-bold text-brand lg:text-lg">
+        <Reveal stagger={0.12} className="text-center">
+          <p
+            data-reveal-item
+            className="text-sm font-bold text-brand lg:text-lg"
+          >
             Our products
           </p>
-          <h2 className="mt-[7px] text-[26px] leading-[34.4px] font-bold text-heading-mobile lg:mt-[13.5px] lg:text-4xl lg:leading-[43.2px] lg:tracking-[-0.02em] lg:text-heading">
+          <h2
+            data-reveal-item
+            className="mt-[7px] text-[26px] leading-[34.4px] font-bold text-heading-mobile lg:mt-[13.5px] lg:text-4xl lg:leading-[43.2px] lg:tracking-[-0.02em] lg:text-heading"
+          >
             One finance team. Two industries.
           </h2>
-          <p className="mx-auto mt-3 text-[15px] leading-6 text-body-mobile lg:mt-[11.5px] lg:max-w-[480px] lg:text-base lg:leading-[24.7px] lg:text-body">
+          <p
+            data-reveal-item
+            className="mx-auto mt-3 text-[15px] leading-6 text-body-mobile lg:mt-[11.5px] lg:max-w-[480px] lg:text-base lg:leading-[24.7px] lg:text-body"
+          >
             Each product is built for the businesses it serves, and delivered by
             our team every week.
           </p>
-        </div>
+        </Reveal>
 
-        <div className="mt-8 grid gap-5 lg:mt-[83px] lg:grid-cols-2 lg:gap-6">
+        <Reveal
+          stagger={0.15}
+          className="mt-8 grid gap-5 lg:mt-[83px] lg:grid-cols-2 lg:gap-6"
+        >
           {products.map((product) => (
             <article
               key={product.name}
-              className="flex flex-col overflow-hidden rounded-[21px] bg-white lg:min-h-[653.5px] lg:rounded-[29px]"
+              data-reveal-item
+              className="hover-lift flex flex-col overflow-hidden [--lift-scale:1.015] rounded-[21px] bg-white lg:min-h-[653.5px] lg:rounded-[29px]"
             >
               <div className={`relative aspect-[608/300] ${product.panel}`}>
                 <Image
@@ -88,7 +105,7 @@ export default function Products() {
               </div>
             </article>
           ))}
-        </div>
+        </Reveal>
       </div>
     </section>
   );

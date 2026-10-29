@@ -5,14 +5,14 @@ const columns = [
   {
     title: "Solutions",
     links: [
-      { label: "OWA", href: "/products/owa" },
-      { label: "Medbooks", href: "/products/medbooks" },
+      { label: "OWA", href: "/#owa" },
+      { label: "Medbooks", href: "/#medbooks" },
     ],
   },
   {
     title: "Company",
     links: [
-      { label: "About us", href: "/about" },
+      { label: "About us", href: "/#about" },
       { label: "Contact", href: "/contact" },
     ],
   },

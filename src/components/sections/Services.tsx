@@ -37,7 +37,10 @@ const services = [
 
 export default function Services() {
   return (
-    <section className="bg-[#091826]">
+    <section
+      id="services"
+      className="scroll-mt-16 bg-[#091826] lg:scroll-mt-[84px]"
+    >
       <div className="mx-auto max-w-[1440px] px-5 pt-[56px] pb-[56px] lg:px-0 lg:pt-[101px] lg:pb-[100px]">
         <Reveal stagger={0.12} className="text-center text-white">
           <p data-reveal-item className="text-sm font-bold lg:text-lg">

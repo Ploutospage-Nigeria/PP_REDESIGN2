@@ -5,8 +5,8 @@ const columns = [
   {
     title: "Solutions",
     links: [
-      { label: "OWA", href: "/#owa" },
-      { label: "Medbooks", href: "/#medbooks" },
+      { label: "OWA", href: "/owa" },
+      { label: "Medbooks", href: "/medbooks" },
     ],
   },
   {

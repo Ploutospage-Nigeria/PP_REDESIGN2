@@ -17,7 +17,7 @@ const products = [
     title: "Know your profit. Every month.",
     body: "Daily sales and stock by WhatsApp voice note, monthly profit reports, tax-ready and audited books, and the OWA Co-operative for savings and inventory loans.",
     link: "Discover OWA",
-    href: "/products/owa",
+    href: "/owa",
     linkClass: "text-[#4c1e72]",
   },
   {
@@ -32,7 +32,7 @@ const products = [
     title: "Run a compliant, bankable healthcare business.",
     body: "Weekly bookkeeping, tax filing, inventory assurance, HMO claims tracking and audited accounts for pharmacies, hospitals, clinics and distributors.",
     link: "Discover MedBooks",
-    href: "/products/medbooks",
+    href: "/medbooks",
     linkClass: "text-[#2351d6]",
   },
 ];

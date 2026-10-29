@@ -1,0 +1,1 @@
+A Ploutos Page agent presenting an OWA leaflet to a group of market traders

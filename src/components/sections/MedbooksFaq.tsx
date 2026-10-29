@@ -2,7 +2,7 @@ import Link from "next/link";
 
 import Reveal from "@/components/motion/Reveal";
 
-const faqs: { q: string; a: string; width?: string }[] = [
+export const faqs: { q: string; a: string; width?: string }[] = [
   {
     q: "Who is MedBooks for?",
     a: "Healthcare businesses such as pharmacies, hospitals, clinics and distributors that want clearer records of their finances, stock and obligations.",

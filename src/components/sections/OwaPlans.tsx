@@ -3,7 +3,7 @@ import Link from "next/link";
 
 import Reveal from "@/components/motion/Reveal";
 
-const plans = [
+export const plans = [
   {
     name: "RETAILER",
     audience: "Single-shop retail traders",

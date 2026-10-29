@@ -21,14 +21,14 @@ export default function About() {
             >
               About ploutos page
             </p>
-            <h2
+            <h1
               data-reveal-item
               className="mt-[11.8px] text-[34px] leading-[41.6px] font-bold text-white xl:mt-[13.7px] xl:text-[60px] xl:leading-[72px] xl:tracking-[-0.02em]"
             >
               Built in the market,
               <br />
               <span className="text-brand">not in an office.</span>
-            </h2>
+            </h1>
           </Reveal>
 
           <Reveal

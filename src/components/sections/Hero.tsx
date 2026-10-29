@@ -29,7 +29,7 @@ export default function Hero() {
             className="mt-[27.5px] flex flex-col gap-3 xl:mt-9 xl:flex-row xl:gap-6"
           >
             <Link
-              href="/products"
+              href="/#products"
               className="flex h-[52.5px] items-center justify-center gap-2 rounded-full bg-brand text-base font-bold text-white xl:h-16 xl:gap-[9px] xl:px-[21px]"
             >
               Explore our Solutions

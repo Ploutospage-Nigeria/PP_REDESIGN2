@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 
 const links = [
   { label: "Home", href: "/" },
-  { label: "About us", href: "/about" },
+  { label: "About us", href: "/#about" },
   { label: "Contact", href: "/contact" },
 ];
 
@@ -46,7 +46,7 @@ export default function Navbar() {
             <Link href={links[0].href}>{links[0].label}</Link>
           </li>
           <li>
-            <button type="button" className="flex items-center gap-2">
+            <Link href="/#services" className="flex items-center gap-2">
               Services
               <Image
                 src="/icons/chevron-down.svg"
@@ -54,7 +54,7 @@ export default function Navbar() {
                 width={14}
                 height={8}
               />
-            </button>
+            </Link>
           </li>
           {links.slice(1).map((link) => (
             <li key={link.href}>

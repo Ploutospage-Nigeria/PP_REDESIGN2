@@ -6,6 +6,7 @@ import Reveal from "@/components/motion/Reveal";
 
 const products = [
   {
+    id: "owa",
     name: "OWA",
     image: "/images/products/owa.png",
     imageAlt:
@@ -20,6 +21,7 @@ const products = [
     linkClass: "text-[#4c1e72]",
   },
   {
+    id: "medbooks",
     name: "MedBooks",
     image: "/images/products/medbooks.png",
     imageAlt:
@@ -71,8 +73,9 @@ export default function Products() {
           {products.map((product) => (
             <article
               key={product.name}
+              id={product.id}
               data-reveal-item
-              className="hover-lift flex flex-col overflow-hidden [--lift-scale:1.015] rounded-[21px] bg-white lg:min-h-[653.5px] lg:rounded-[29px]"
+              className="hover-lift flex scroll-mt-[84px] flex-col overflow-hidden [--lift-scale:1.015] rounded-[21px] lg:scroll-mt-[108px] bg-white lg:min-h-[653.5px] lg:rounded-[29px]"
             >
               <div className={`relative aspect-[608/300] ${product.panel}`}>
                 <Image

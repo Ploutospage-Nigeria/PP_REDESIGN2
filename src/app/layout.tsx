@@ -24,7 +24,13 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="en"
       className={`${hankenGrotesk.variable} h-full font-sans antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        {/* Without JavaScript, show scroll-reveal content straight away. */}
+        <noscript>
+          <style>{`[data-reveal] , [data-reveal] [data-reveal-item] { opacity: 1 !important; }`}</style>
+        </noscript>
+        {children}
+      </body>
     </html>
   );
 }

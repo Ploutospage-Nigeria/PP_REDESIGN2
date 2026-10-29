@@ -1,5 +1,7 @@
 import Image from "next/image";
 
+import Reveal from "@/components/motion/Reveal";
+
 const services = [
   {
     title: "Business recordkeeping",
@@ -37,22 +39,37 @@ export default function Services() {
   return (
     <section className="bg-[#091826]">
       <div className="mx-auto max-w-[1440px] px-5 pt-[56px] pb-[56px] lg:px-0 lg:pt-[101px] lg:pb-[100px]">
-        <div className="text-center text-white">
-          <p className="text-sm font-bold lg:text-lg">More than bookkeeping</p>
-          <h2 className="mx-auto mt-[9px] text-[26px] leading-[33.3px] font-bold lg:mt-[12.5px] lg:max-w-[620px] lg:text-4xl lg:leading-[43px] lg:tracking-[-0.02em]">
+        <Reveal stagger={0.12} className="text-center text-white">
+          <p data-reveal-item className="text-sm font-bold lg:text-lg">
+            More than bookkeeping
+          </p>
+          <h2
+            data-reveal-item
+            className="mx-auto mt-[9px] text-[26px] leading-[33.3px] font-bold lg:mt-[12.5px] lg:max-w-[620px] lg:text-4xl lg:leading-[43px] lg:tracking-[-0.02em]"
+          >
             Turn day-to-day business activity into useful financial information.
           </h2>
-          <p className="mx-auto mt-3 text-[15px] leading-[24.6px] text-[#ced7e2] lg:mt-[12.5px] lg:max-w-[500px] lg:text-base lg:leading-6 lg:text-white">
+          <p
+            data-reveal-item
+            className="mx-auto mt-3 text-[15px] leading-[24.6px] text-[#ced7e2] lg:mt-[12.5px] lg:max-w-[500px] lg:text-base lg:leading-6 lg:text-white"
+          >
             Practical financial management services that move businesses from
             fragmented records to a clear understanding of their operations.
           </p>
-        </div>
+        </Reveal>
 
-        <ul className="mt-[29.5px] grid gap-[17px] lg:mx-auto lg:mt-[57px] lg:max-w-[912px] lg:grid-cols-3 lg:gap-x-8 lg:gap-y-[33px]">
+        <Reveal
+          as="ul"
+          variant="scale"
+          stagger={0.08}
+          duration={0.6}
+          className="mt-[29.5px] grid gap-[17px] lg:mx-auto lg:mt-[57px] lg:max-w-[912px] lg:grid-cols-3 lg:gap-x-8 lg:gap-y-[33px]"
+        >
           {services.map((service) => (
             <li
               key={service.title}
-              className="rounded-[18px] bg-white px-5 pt-[18px] pb-6 lg:px-4 lg:pt-[29.5px] lg:pb-[26px]"
+              data-reveal-item
+              className="hover-lift rounded-[18px] bg-white px-5 pt-[18px] pb-6 lg:px-4 lg:pt-[29.5px] lg:pb-[26px]"
             >
               <span className="flex h-[46px] w-[49px] items-center justify-center rounded-2xl bg-[#e6f8fc]">
                 <Image src={service.icon} alt="" width={28} height={28} />
@@ -65,7 +82,7 @@ export default function Services() {
               </p>
             </li>
           ))}
-        </ul>
+        </Reveal>
       </div>
     </section>
   );

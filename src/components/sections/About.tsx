@@ -5,7 +5,7 @@ import Reveal from "@/components/motion/Reveal";
 const segments = [
   "Market traders",
   "Pharmacies",
-  "Clinics and hospitals",
+  "Hospitals and diagnostics",
   "Distributors",
 ];
 

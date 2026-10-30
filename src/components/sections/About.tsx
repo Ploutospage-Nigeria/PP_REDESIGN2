@@ -88,7 +88,7 @@ export default function About() {
               alt="A Ploutos Page team member in a branded hoodie at the company's exhibition stand"
               fill
               sizes="(min-width: 1280px) 615px, calc(100vw - 40px)"
-              className="object-cover object-[50%_30%]"
+              className="object-cover object-[50%_40%]"
             />
           </Reveal>
         </div>

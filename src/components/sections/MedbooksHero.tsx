@@ -7,18 +7,17 @@ import Reveal from "@/components/motion/Reveal";
 export default function MedbooksHero() {
   return (
     <section className="relative isolate overflow-hidden bg-[#1c1e4b]">
-      {/* The photo shows on desktop only; mobile is a solid navy, as in the design. */}
       <Image
         src="/images/medbooks/hero-pharmacy.jpg"
         alt=""
         fill
         preload
         sizes="100vw"
-        className="-z-20 hidden object-cover xl:block"
+        className="-z-20 object-cover"
       />
       <div
         aria-hidden="true"
-        className="absolute inset-0 -z-10 hidden bg-[#01032f]/80 xl:block"
+        className="absolute inset-0 -z-10 bg-[#01032f]/80"
       />
 
       <Reveal

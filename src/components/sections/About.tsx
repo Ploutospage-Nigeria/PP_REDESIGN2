@@ -77,14 +77,18 @@ export default function About() {
             </Reveal>
           </div>
 
-          <Reveal variant="right" duration={1} className="xl:flex-1">
+          <Reveal
+            variant="right"
+            duration={1}
+            className="relative aspect-[1226/920] overflow-hidden rounded-[20px] xl:flex-1 xl:rounded-[32px]"
+          >
+            {/* Portrait photo cropped into the design's landscape frame. */}
             <Image
-              src="/images/about/market.png"
-              alt="A Ploutos Page agent presenting an OWA leaflet to a group of market traders"
-              width={1226}
-              height={920}
+              src="/images/about/team.jpg"
+              alt="A Ploutos Page team member in a branded hoodie at the company's exhibition stand"
+              fill
               sizes="(min-width: 1280px) 615px, calc(100vw - 40px)"
-              className="h-auto w-full rounded-[20px] xl:rounded-[32px]"
+              className="object-cover object-[50%_40%]"
             />
           </Reveal>
         </div>

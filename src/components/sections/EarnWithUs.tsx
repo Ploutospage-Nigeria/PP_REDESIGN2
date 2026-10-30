@@ -62,7 +62,7 @@ export default function EarnWithUs() {
             members and freelancers welcome.
           </p>
           <Link
-            href="https://wa.me/"
+            href="https://wa.me/2348163489375"
             data-reveal-item
             className="mt-[22.6px] flex h-[53px] items-center justify-center gap-[10px] rounded-full bg-[#17385a] text-base font-bold text-white xl:mt-[92.6px] xl:inline-flex xl:h-[57px] xl:gap-[9px] xl:px-[31px] xl:text-[17px]"
           >

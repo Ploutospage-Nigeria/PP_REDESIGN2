@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import ArrowRight from "@/components/icons/ArrowRight";
+import HashLink from "@/components/HashLink";
 import Float from "@/components/motion/Float";
 import Reveal from "@/components/motion/Reveal";
 
@@ -28,13 +29,13 @@ export default function Hero() {
             data-reveal-item
             className="mt-[27.5px] flex flex-col gap-3 xl:mt-9 xl:flex-row xl:gap-6"
           >
-            <Link
+            <HashLink
               href="/#products"
               className="flex h-[52.5px] items-center justify-center gap-2 rounded-full bg-brand text-base font-bold text-white xl:h-16 xl:gap-[9px] xl:px-[21px]"
             >
               Explore our Solutions
               <ArrowRight className="size-5 xl:size-6" />
-            </Link>
+            </HashLink>
             <Link
               href="/contact"
               className="flex h-[52.5px] items-center justify-center rounded-full bg-white text-base font-bold text-navy xl:h-16 xl:px-[21px]"

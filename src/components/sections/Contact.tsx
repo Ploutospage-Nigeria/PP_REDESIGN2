@@ -7,8 +7,8 @@ import ContactForm from "./ContactForm";
 const channels = [
   {
     label: "Whatsapp",
-    value: "09087675645",
-    href: "https://wa.me/2349087675645",
+    value: "08163489375",
+    href: "https://wa.me/2348163489375",
     icon: "/icons/contact-whatsapp.svg",
   },
   {

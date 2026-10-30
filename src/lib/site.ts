@@ -9,7 +9,7 @@ export const site = {
     "We help businesses manage finances, track inventory, stay tax-ready and build reliable financial records without any complexity.",
   email: "support@ploutospage.ng",
   phone: "+2348163489375",
-  whatsapp: "+2349087675645",
+  whatsapp: "+2348163489375",
   address: {
     streetAddress: "Suite 5, Mojisola Mall, Owode Ibeshe",
     addressLocality: "Ikorodu",

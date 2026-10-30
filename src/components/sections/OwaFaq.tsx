@@ -27,7 +27,7 @@ export const faqs: { q: string; a: string; width?: string }[] = [
   },
   {
     q: "How much does OWA cost?",
-    a: "₦5,000/month for Retailers, ₦15,000/month for Wholesalers and ₦50,000/month for Multi-shop traders. Co-operative savings are separate from your plan fee.",
+    a: "₦5,000/month for Retailers, ₦15,000/month for Wholesalers and ₦50,000/month for distributors. Co-operative savings are separate from your plan fee.",
   },
 ];
 

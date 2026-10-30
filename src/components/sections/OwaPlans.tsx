@@ -90,17 +90,15 @@ export default function OwaPlans() {
               <li
                 key={plan.name}
                 data-reveal-item
-                className={`hover-lift flex flex-col rounded-3xl px-5 pt-6 pb-6 [--lift-scale:1.02] xl:px-8 xl:pt-10 xl:pb-9 ${
-                  featured
+                className={`hover-lift flex flex-col rounded-3xl px-5 pt-6 pb-6 [--lift-scale:1.02] xl:px-8 xl:pt-10 xl:pb-9 ${featured
                     ? "bg-[#4c1e72] xl:h-[590px]"
                     : "border-[1.5px] border-[#ebe4f3] bg-white xl:h-[559px]"
-                }`}
+                  }`}
               >
                 <div className="flex items-center justify-between">
                   <span
-                    className={`flex size-12 items-center justify-center rounded-xl xl:size-14 ${
-                      featured ? "bg-white/10" : "bg-[#f3ecf9]"
-                    }`}
+                    className={`flex size-12 items-center justify-center rounded-xl xl:size-14 ${featured ? "bg-white/10" : "bg-[#f3ecf9]"
+                      }`}
                   >
                     <Image
                       src={plan.icon.src}
@@ -116,33 +114,29 @@ export default function OwaPlans() {
                   )}
                 </div>
                 <h3
-                  className={`mt-5 text-[13px] font-semibold xl:mt-6 xl:text-sm ${
-                    featured ? "text-[#f5d90a]" : "text-[#4c1e72]"
-                  }`}
+                  className={`mt-5 text-[13px] font-semibold xl:mt-6 xl:text-sm ${featured ? "text-[#f5d90a]" : "text-[#4c1e72]"
+                    }`}
                 >
                   {plan.name}
                 </h3>
                 <p
-                  className={`mt-1 text-[15px] xl:mt-1.5 xl:text-base ${
-                    featured ? "text-[#d8cde6]" : "text-[#5a4c70]"
-                  }`}
+                  className={`mt-1 text-[15px] xl:mt-1.5 xl:text-base ${featured ? "text-[#d8cde6]" : "text-[#5a4c70]"
+                    }`}
                 >
                   {plan.audience}
                 </p>
                 <p
-                  className={`mt-3 flex items-baseline border-b pb-3 xl:mt-4 xl:pb-4 ${
-                    featured
+                  className={`mt-3 flex items-baseline border-b pb-3 xl:mt-4 xl:pb-4 ${featured
                       ? "border-white/15 text-white"
                       : "border-[#ebe4f3] text-[#1f0d30]"
-                  }`}
+                    }`}
                 >
                   <span className="text-[40px] leading-[48px] font-bold tracking-[-0.02em] xl:text-[54px] xl:leading-[60px]">
                     {plan.price}
                   </span>
                   <span
-                    className={`ml-1 text-sm xl:text-base ${
-                      featured ? "text-[#d8cde6]" : "text-[#5a4c70]"
-                    }`}
+                    className={`ml-1 text-sm xl:text-base ${featured ? "text-[#d8cde6]" : "text-[#5a4c70]"
+                      }`}
                   >
                     /month
                   </span>
@@ -151,9 +145,8 @@ export default function OwaPlans() {
                   {plan.features.map((feature) => (
                     <li
                       key={feature}
-                      className={`flex items-center gap-2.5 text-[15px] xl:text-base ${
-                        feature.startsWith("Everything") ? "font-semibold" : ""
-                      } ${featured ? "text-white" : "text-[#2b1544]"}`}
+                      className={`flex items-center gap-2.5 text-[15px] xl:text-base ${feature.startsWith("Everything") ? "font-semibold" : ""
+                        } ${featured ? "text-white" : "text-[#2b1544]"}`}
                     >
                       <Check featured={featured} />
                       {feature}
@@ -162,11 +155,10 @@ export default function OwaPlans() {
                 </ul>
                 <Link
                   href="/contact"
-                  className={`mt-7 flex h-[52px] items-center justify-center rounded-full text-base font-semibold xl:mt-auto xl:h-[55px] ${
-                    featured
+                  className={`mt-7 flex h-[52px] items-center justify-center rounded-full text-base font-semibold xl:mt-auto xl:h-[55px] ${featured
                       ? "bg-[#f5d90a] text-[#1f0d30]"
                       : "border-[1.5px] border-[#4c1e72] text-[#4c1e72]"
-                  }`}
+                    }`}
                 >
                   {plan.cta}
                 </Link>
